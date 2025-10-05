@@ -505,13 +505,13 @@ const partyWiseData = allNames.map(name => {
 </div> */}
 <div className="bg-white mb-4 rounded-xl shadow-sm border border-gray-100 p-4 sm:p-6 ">
   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6 text-center">
-    Party-wise Sales, Purchases & Profit Distribution
+    Party-wise Sales, Purchases Distribution
   </h3>
 
 
 
   {/* Responsive 1-3 column grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
     
     {/* 🟦 SALES PIE */}
     <div className="flex flex-col items-center justify-center w-full">
@@ -572,8 +572,8 @@ const partyWiseData = allNames.map(name => {
         </ResponsiveContainer>
       </div>
     </div>
+{/* 
 
-    {/* 🟩 PROFIT PIE */}
     <div className="flex flex-col items-center justify-center w-full">
       <h4 className="text-sm sm:text-base font-medium text-gray-700 mb-2 text-center">
         Profit Distribution by Party
@@ -635,9 +635,75 @@ const partyWiseData = allNames.map(name => {
         </ResponsiveContainer>
       </div>
 
-      {/* ✅ Legend Indicators */}
+     
      
     </div>
+
+<div className="flex flex-col items-center justify-center w-full mt-6">
+  <h4 className="text-sm sm:text-base font-medium text-gray-700 mb-2 text-center">
+    Loss Distribution by Party
+  </h4>
+  <div className="w-full h-[220px] sm:h-[250px] md:h-[300px]">
+    <ResponsiveContainer width="100%" height="100%">
+      <PieChart>
+        <Pie
+          data={partyWiseData.map((party) => ({
+            ...party,
+            loss: Math.max(-party.profit, 0), // ✅ Convert negative profits to positive loss values
+          }))}
+          cx="50%"
+          cy="50%"
+          labelLine={false}
+          outerRadius="80%"
+          dataKey="loss"
+          nameKey="name"
+        >
+          {partyWiseData.map((entry, index) => (
+            <Cell
+              key={`loss-${index}`}
+              fill={entry.profit < 0 ? "#f87171": "#d1d5db"}
+            />
+          ))}
+        </Pie>
+
+        <Tooltip
+          content={({ active, payload }) => {
+            if (active && payload && payload.length) {
+              const data = payload[0].payload;
+              return (
+                <div
+                  style={{
+                    background: "#fff",
+                    border: "1px solid #e5e7eb",
+                    borderRadius: "8px",
+                    padding: "8px 12px",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                  }}
+                >
+                  <p className="font-semibold text-gray-800">{data.name}</p>
+                  <p className="text-sm text-red-600">
+                    Loss: ₹{Math.max(-data.profit, 0).toLocaleString()}
+                  </p>
+                  <p className="text-sm text-blue-600">
+                    Sales: ₹{data.sales.toLocaleString()}
+                  </p>
+                  <p className="text-sm text-purple-600">
+                    Purchases: ₹{data.purchases.toLocaleString()}
+                  </p>
+                </div>
+              );
+            }
+            return null;
+          }}
+        />
+      </PieChart>
+    </ResponsiveContainer>
+  </div>
+
+
+
+</div> */}
+
   </div>
    <div className="mt-6 flex overflow-x-auto justify-center align-center space-x-4 pb-2">
   {partyWiseData.map((party, index) => (
