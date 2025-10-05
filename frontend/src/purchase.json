@@ -1,0 +1,67 @@
+[
+    {
+        "Party_Name": "A",
+        "Party_Phone": "1234567890",
+        "Bill_Date": "2023-08-01",
+        "Bill_Number": "1234",
+        "State_Of_Supply": "Gujarat",
+        "Total_Amount": 200.00,
+        "Total_Paid": 0.00,
+        "Balance_Due": 200.00,
+        "items": [
+            {
+                "Item_Name": "Monitor",
+                "Quantity": 1,
+                "Unit": "pcs",
+                "Purchase_Price": 100,
+                "Discount": 0,
+                "Tax_Type": "GST 0%",
+                "Tax_Amount": 0,
+                "Amount": 100
+            },
+            {
+                "Item_Name": "Keyboard",
+                "Quantity": 1,
+                "Unit": "pcs",
+                "Purchase_Price": 100,
+                "Discount": 0,
+                "Tax_Type": "GST 0%",
+                "Tax_Amount": 0,
+                "Amount": 100
+            }
+        ]
+    },
+    {
+        "Party_Name": "B",
+        "Party_Phone": "1234567890",
+        "Bill_Date": "2023-08-01",
+        "Bill_Number": "1235",
+        "State_Of_Supply": "Gujarat",
+        "Total_Amount": 300.00,
+        "Total_Paid": 0.00,
+        "Balance_Due": 300.00,
+        "items": [
+            {
+                "Item_Name": "cctv",
+                "Quantity": 2,
+                "Unit": "pcs",
+                "Purchase_Price": 90,
+                "Discount": 0,
+                "Tax_Type": "GST 0%",
+                "Tax_Amount": 0,
+                "Amount": 18
+            },
+            {
+                "Item_Name": "headphone",
+                "Quantity": 3,
+                "Unit": "pcs",
+                "Purchase_Price": 40,
+                "Discount": 0,
+                "Tax_Type": "GST 0%",
+                "Tax_Amount": 0,
+                "Amount": 120
+            }
+        ]
+    }
+  
+]

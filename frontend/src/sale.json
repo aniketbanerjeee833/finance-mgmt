@@ -1,0 +1,67 @@
+[
+    {
+        "Party_Name": "John Doe",
+        "Party_Phone": "1234567890",
+        "Invoice_Date": "2023-08-01",
+        "Invoice_Number": "INV123",
+        "State_Of_Supply": "Gujarat",
+        "Total_Amount": 270.00,
+        "Total_Received": 70.00,
+        "Balance_Due": 200.00,
+        "items": [
+            {
+                "Item_Name": "Monitor",
+                "Quantity": 2,
+                "Unit": "pcs",
+                "Sale_Price": 100,
+                "Discount": 0,
+                "Tax_Type": "GST 5%",
+                "Tax_Amount": 105,
+                "Amount": 210
+            },
+            {
+                "Item_Name": "Keyboard",
+                "Quantity": 1,
+                "Unit": "pcs",
+                "Sale_Price": 50,
+                "Discount": 0,
+                "Tax_Type": "GST 5%",
+                "Tax_Amount": 10,
+                "Amount": 60
+            }
+        ]
+    },
+    {
+        "Party_Name": "A",
+        "Party_Phone": "1234567890",
+        "Invoice_Date": "2023-08-01",
+        "Invoice_Number": "INV123",
+        "State_Of_Supply": "Gujarat",
+        "Total_Amount": 370.00,
+        "Total_Received": 70.00,
+        "Balance_Due": 300.00,
+        "items": [
+            {
+                "Item_Name": "cctv",
+                "Quantity": 2,
+                "Unit": "pcs",
+                "Sale_Price": 100,
+                "Discount": 0,
+                "Tax_Type": "GST 5%",
+                "Tax_Amount": 105,
+                "Amount": 210
+            },
+            {
+                "Item_Name": "headphone",
+                "Quantity": 3,
+                "Unit": "pcs",
+                "Sale_Price": 50,
+                "Discount": 0,
+                "Tax_Type": "GST 5%",
+                "Tax_Amount": 10,
+                "Amount": 160
+            }
+        ]
+    }
+  
+]
